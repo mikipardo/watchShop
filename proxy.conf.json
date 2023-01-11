@@ -1,6 +1,6 @@
 {
     "/server/":{
-        "target" : "http://localhost:80/ejercicio01_angular/server",
+        "target" : "http://localhost:80/Ejercicio01Angular/server",
         "secure" : false,
         "logLevel" : "debug",
         "changeOrigin": true,

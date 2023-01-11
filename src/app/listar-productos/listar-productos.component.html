@@ -1,0 +1,9 @@
+<p>listar-productos works!</p>
+
+<!-- *ngFor hace lo mismo que un foreach
+*ngFor repite por cada elemento en comentarios el div indicado
+-->
+
+<div class="listado" *ngFor="let c of relojes" >
+  <b>{{c.modelo}}</b> marca: {{c.marca}}
+</div>
