@@ -1,6 +1,6 @@
 {
     "/server/":{
-        "target" : "http://localhost:80/Ejercicio01Angular/server",
+        "target" : "http://localhost:80/watchShop/server",
         "secure" : false,
         "logLevel" : "debug",
         "changeOrigin": true,
