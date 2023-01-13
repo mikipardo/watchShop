@@ -4,7 +4,7 @@
     <h2><b>(parte servidor)</b></h2>
 </div>
 <div>
-    <a href="nuevoProducto.php">Nuevo Producto</a>
-    <a href="gestionarProductosHtml.php">Gestionar Productos</a>
-    <a href="gestionarPedidosHTML.php">Gestionar Pedidos</a>
+    <a href="../plantillasPHP/nuevoProducto.php">Nuevo Producto</a>
+    <a href="../servicios/gestionarProductos.php">Gestionar Productos</a>
+    <a href="../plantillasPHP/gestionarPedidosHTML.php">Gestionar Pedidos</a>
 </div>
