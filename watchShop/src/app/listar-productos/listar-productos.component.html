@@ -1,0 +1,13 @@
+<p>listar-productos works!</p>
+
+<!-- *ngFor hace lo mismo que un foreach
+*ngFor repite por cada elemento en comentarios el div indicado
+-->
+
+<div class="listado" *ngFor="let rel of relojes" >
+  <b>{{rel.modelo}}</b> marca: {{rel.marca}}
+  <img height="80" src="../../assets/imagenes/{{rel.id}}.jpg" alt="{{rel.modelo}}">
+  <div>Subcategoría: {{rel.subcategoria}}</div>
+  <p>{{rel.precio}} €</p>
+  <button (click)="verDetallesReloj(rel)" >VER DETALLES</button>
+</div>

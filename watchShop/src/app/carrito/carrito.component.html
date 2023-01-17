@@ -1,0 +1,10 @@
+<p>productos en el carrito:</p>
+
+<div style="margin: 10px;" *ngFor="let rc of relojesCarrito">
+    {{rc.reloj.marca}}   {{rc.reloj.modelo}}
+    precio: {{rc.reloj.precio}} cantidad: {{rc.cantidad}}
+</div>
+
+<button (click)="vaciarCarrito()" >VACIAR CARRITO</button>
+
+<button>REALIZAR PEDIDO</button>

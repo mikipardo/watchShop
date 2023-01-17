@@ -1,0 +1,19 @@
+<p>detalle-producto works!</p>
+<div>
+  {{mensaje}}
+</div>
+
+<div>detalles del producto:</div>
+
+<div><b>{{reloj.modelo}}</b></div>
+<img height="120px" src="../../assets/imagenes/{{reloj.id}}.jpg">
+<br>
+<div>
+  <div> modelo: {{reloj.modelo}}</div>
+  <div> precio: {{reloj.precio}}</div>
+  <div> subcategoria: {{reloj.subcategoria}}</div>
+  <div> digital: {{reloj.digital}}</div>
+  <div> tipo: {{reloj.genero}}</div>
+  <button (click)="agregarProductoCarrito()">AGREGAR AL CARRITO</button>
+  cantidad: <input type="number" [(ngModel)]="cantidad" />
+</div>
