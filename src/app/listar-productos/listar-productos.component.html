@@ -1,0 +1,13 @@
+
+<div class="listado" *ngFor="let rel of relojes" >
+<div class="container">
+  <div class="product">
+    <div class="product-card">
+      <h2 class="name"><b>{{rel.modelo}}</b><span> </span>{{rel.marca}}</h2>
+      <span class="price">{{rel.precio}} €</span>
+      <a  (click)="verDetallesReloj(rel)"  class="popup-btn">Quick View</a>
+      <img src="../../assets/imagenes/{{rel.id}}.jpg" alt="{{rel.modelo}}" class="product-img">
+    </div>
+  </div>
+</div>
+</div>

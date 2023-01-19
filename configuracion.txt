@@ -1,0 +1,3 @@
+-- Arrancar Servidor con proxy  
+ng serve --proxy-config proxy.conf.json
+git pull remote branch
