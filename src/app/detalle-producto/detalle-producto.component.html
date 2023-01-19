@@ -1,0 +1,31 @@
+
+  <div class="container">
+    <div class="product">
+      <div class="popup-view active">
+        <div class="popup-card">
+          <a><i class="fas fa-times close-btn"></i></a>
+          <div class="product-img">
+            <img src="../../assets/imagenes/{{reloj.id}}.jpg" alt="{{reloj.modelo}}" >
+          </div>
+          <div class="info">
+            <h2>{{reloj.marca}}<span> </span>{{reloj.modelo}}<br><span>{{reloj.subcategoria}}</span></h2>
+            <p><b>{{reloj.comentario}}</b><span> </span></p>
+            <p><b>Género: {{reloj.genero}}</b><span> </span></p>
+            <p><b>digital: {{reloj.digital}}</b><span> </span></p>
+            <span class="price bottom-bar"><b>{{reloj.precio}} €</b> </span>
+            <div class="form-outline">
+              <label class="form-label" for="typeNumber">Quantity</label>
+              <input type="number" min="1" [(ngModel)]="cantidad" id="typeNumber" class="form-control w-25" />
+            </div>
+            <button (click)="agregarProductoCarrito()" class="add-cart-btn">Add to Cart</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+

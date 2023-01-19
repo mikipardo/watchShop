@@ -1,0 +1,11 @@
+<p>productos en el carrito:</p>
+
+<div style="margin: 10px;" *ngFor="let rc of relojesCarrito">
+  <img height="120px" src="../../assets/imagenes/{{rc.reloj.id}}.jpg">
+    {{rc.reloj.marca}}   {{rc.reloj.modelo}}
+    precio: {{rc.reloj.precio}} cantidad: {{rc.cantidad}}
+</div>
+
+<button (click)="vaciarCarrito()" >VACIAR CARRITO</button>
+
+<button (click)="realizarPedido()" >REALIZAR PEDIDO</button>
