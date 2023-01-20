@@ -1,7 +1,11 @@
+
+import  Swal from 'sweetalert2';
 import { ServicioProductosService } from './../servicio-productos.service';
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Reloj } from '../models/Reloj';
+
+
 
 @Component({
   selector: 'app-detalle-producto',
@@ -25,9 +29,6 @@ ngOnInit():void {
 }
 agregarProductoCarrito():void{
 
-  alert(
-  "el id es " +this.idReloj);
-
   //llamar a una operacion del servicio de angular
   //para indicar al server que id de producto va al carrito
 
@@ -35,7 +36,25 @@ agregarProductoCarrito():void{
   //dandole la id del reloj y la cantidad
   //de momento para comprobar que esta funcionando el carrito:
 
-    this.miServicio.agregarAlCarrito(this.idReloj,this.cantidad).subscribe(res => (res=="ok")?alert("producto agregado al carrito" +res):alert("no se pudo agregar el producto al carrito"+res) );
+    this.miServicio.agregarAlCarrito(this.idReloj,this.cantidad).subscribe(res => (res=="ok")?this.sweetAlertCheck("producto agregado al carrito estado:" +res):alert("no se pudo agregar el producto al carrito"+res) );
 }
 
+sweetAlertCheck(message:string){
+  const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
+  })
+
+  Toast.fire({
+    icon: 'success',
+    title: message
+  })
+}
 }

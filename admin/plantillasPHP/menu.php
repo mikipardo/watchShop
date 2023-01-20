@@ -5,5 +5,5 @@
 <div>
     <a href="../plantillasPHP/nuevoProducto.php">Nuevo Producto</a>
     <a href="../servicios/gestionarProductos.php">Gestionar Productos</a>
-    <a href="../plantillasPHP/gestionarPedidosHTML.php">Gestionar Pedidos</a>
+    <a href="../servicios/gestionarPedidos.php">Gestionar Pedidos</a>
 </div>

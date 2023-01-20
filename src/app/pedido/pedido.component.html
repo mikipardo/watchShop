@@ -1,9 +1,12 @@
 <div>
   Rellena los datos de tu pedido<br/>
   nombre completo: <input type="text" [(ngModel)]="pedido.nombre" /> <br>
+  <span [hidden]="nombreOk" style="color: red;">error en el nombre</span>
   direccion de envio: <input type="text" [(ngModel)]="pedido.direccion" /> <br>
   Codigo Postal: <input type="text" [(ngModel)]="pedido.cp" /> <br>
+  <span [hidden]="cp" style="color: red;">error en el Codigo Postal</span>
   Telefono: <input type="text" [(ngModel)]="pedido.telefono" /> <br>
+  <span [hidden]="cp" style="color: red;">error en el Teléfono</span>
   Fecha: <input type="text" [(ngModel)]="pedido.fecha" /> <br>
   Horario: <input type="text" [(ngModel)]="pedido.horario" /> <br>
   numero de tarjeta de credito (no insertar valores tarjeta)<br>
