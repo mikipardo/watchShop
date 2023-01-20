@@ -1,5 +1,4 @@
 
-
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +11,9 @@ body {
   justify-content: center;
   align-items: center;
   background: #151515;
+  background: #474bff;
+  background: -webkit-linear-gradient(0deg, #474bff 0%, #bc48ff 100%);
+  background: linear-gradient(0deg, #474bff 0%, #bc48ff 100%);
 }
 
 .container {
@@ -298,4 +300,10 @@ body {
 }
 img{
   border-radius: 5%;
+}
+
+body{
+  background: #474bff;
+background: -webkit-linear-gradient(0deg, #474bff 0%, #bc48ff 100%);
+background: linear-gradient(0deg, #474bff 0%, #bc48ff 100%);
 }

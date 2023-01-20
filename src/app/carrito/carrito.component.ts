@@ -14,6 +14,7 @@ import { Reloj } from '../models/Reloj';
 export class CarritoComponent {
 
   relojesCarrito:RelojesCarrito[]= {} as RelojesCarrito[] ;
+  valoracion:number=0;
 
   constructor(private httpo: HttpClient,private miServicio:ServicioProductosService ,private router:Router) {}
 
@@ -22,6 +23,7 @@ export class CarritoComponent {
   }
 
   public listarRelojesCarrito() {
+    
   this.miServicio.getRelojesCarrito().subscribe(relojes => this.relojesCarrito = relojes);
 
   }

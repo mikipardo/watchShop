@@ -1,11 +1,53 @@
-<p>productos en el carrito:</p>
-
 <div style="margin: 10px;" *ngFor="let rc of relojesCarrito">
-  <img height="120px" src="../../assets/imagenes/{{rc.reloj.id}}.jpg">
-    {{rc.reloj.marca}}   {{rc.reloj.modelo}}
-    precio: {{rc.reloj.precio}} cantidad: {{rc.cantidad}}
+<div class="container d-flex justify-content-center mt-50 mb-50">
+
+  <div class="row">
+    <div class="col-md-10">
+
+      <div class="card card-body">
+        <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
+          <div class="mr-2 mb-3 mb-lg-0">
+            <img height="120px" src="../../assets/imagenes/{{rc.reloj.id}}.jpg"  alt="">
+
+          </div>
+
+          <div class="media-body">
+            <h6 class="media-title font-weight-semibold">
+              <a href="#" data-abc="true">{{rc.reloj.modelo}}</a>
+            </h6>
+
+            <ul class="list-inline list-inline-dotted mb-3 mb-lg-2">
+              <li class="list-inline-item"><a href="#" class="text-muted" data-abc="true">{{rc.reloj.valoracion}}</a></li>
+              <li class="list-inline-item"><a href="#" class="text-muted" data-abc="true">{{rc.reloj.subcategoria}}</a></li>
+            </ul>
+     
+            <p class="mb-3">{{rc.reloj.comentario}} | 15.49 cm (6.1 inch) Display 12MP Rear Camera | 7MP Front Camera A12 Bionic Chip
+              {{rc.reloj.genero}} | Gorilla Glass with high quality display </p>
+
+        
+          </div>
+
+          <div class="mt-3 mt-lg-0 ml-lg-3 text-center">
+            <h3 class="mb-0 font-weight-semibold">{{rc.reloj.precio}}€</h3>
+            <div class="star-ratings-css" title="{{rc.reloj.valoracion}}"></div>
+   
+
+            <div class="text-muted"></div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+  <div class="col-xs-12">
+    <div class="centrado">
+ 
+      <button  type="button" class="btn btn-success"(click)="realizarPedido()" >REALIZAR PEDIDO</button>  
+      <button  type="button" class="btn btn-danger"(click)="vaciarCarrito()" >VACIAR CARRITO</button> 
+    </div>
+ 
 </div>
 
-<button (click)="vaciarCarrito()" >VACIAR CARRITO</button>
-
-<button (click)="realizarPedido()" >REALIZAR PEDIDO</button>
+</div>

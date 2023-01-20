@@ -289,3 +289,8 @@ img{
 p{
   color:  #1d212b;
 }
+body{
+  background: #474bff;
+background: -webkit-linear-gradient(0deg, #474bff 0%, #bc48ff 100%);
+background: linear-gradient(0deg, #474bff 0%, #bc48ff 100%);
+}

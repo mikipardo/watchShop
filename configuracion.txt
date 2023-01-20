@@ -1,3 +1,7 @@
 -- Arrancar Servidor con proxy  
 ng serve --proxy-config proxy.conf.json
 git pull remote branch
+
+npm install
+npm install --save sweetalert2
+npm install bootstrap jquery @popperjs/core
