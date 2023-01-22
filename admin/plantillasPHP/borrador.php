@@ -9,27 +9,7 @@
 </head>
 <body>
 
-<?php
-    include("menu.php");
-    ?>
-        <h1 class="text-3xl text-center  font-bold my-16 ">
-    <b> Gestion de Pedidos:</b>
-
-
-  </h1>
-
-  <?php
-
-$idpedido = 0;
-$idpedido_anterior = 0;
-$id_direccion=0;
-$idActual=0;
-foreach($pedidos as $pedido){
-    $idpedido = $pedido["id"];
-
-    ?>
-
-<div class="relative overflow-x-auto shadow-md sm:rounded-lg ml-32  mr-32">
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
@@ -40,37 +20,31 @@ foreach($pedidos as $pedido){
                     </div>
                 </th>
                 <th scope="col" class="px-6 py-3">
-                nombre
+                    Product name
                 </th>
                 <th scope="col" class="px-6 py-3">
-                direccion
+                    Color
                 </th>
                 <th scope="col" class="px-6 py-3">
-                horario
+                    Category
                 </th>
                 <th scope="col" class="px-6 py-3">
-                fecha
+                    Accesories
                 </th>
                 <th scope="col" class="px-6 py-3">
-                telefono
+                    Available
                 </th>
                 <th scope="col" class="px-6 py-3">
-                tarjeta
+                    Price
                 </th>
                 <th scope="col" class="px-6 py-3">
-                cp
+                    Weight
                 </th>
                 <th scope="col" class="px-6 py-3">
                     Action
                 </th>
             </tr>
         </thead>
-        <?php
-
-        if($idpedido!=$idpedido_anterior){
-
-          ?>
-
         <tbody>
             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                 <td class="w-4 p-4">
@@ -80,25 +54,25 @@ foreach($pedidos as $pedido){
                     </div>
                 </td>
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                <?= $pedido["nombre"] ?>  <?= $pedido["id"] ?>
+                    Apple MacBook Pro 17"
                 </th>
                 <td class="px-6 py-4">
-                <?= $pedido["direccion"] ?>
+                    Sliver
                 </td>
                 <td class="px-6 py-4">
-               <?= $pedido["horario"] ?>
+                    Laptop
                 </td>
                 <td class="px-6 py-4">
-                <?= $pedido["fecha"] ?>
+                    Yes
                 </td>
                 <td class="px-6 py-4">
-                <?= $pedido["telefono"] ?>
+                    Yes
                 </td>
                 <td class="px-6 py-4">
-                <?= $pedido["tarjeta"] ?>
+                    $2999
                 </td>
                 <td class="px-6 py-4">
-                <?= $pedido["cp"] ?>
+                    3.0 lb.
                 </td>
                 <td class="flex items-center px-6 py-4 space-x-3">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
@@ -106,53 +80,8 @@ foreach($pedidos as $pedido){
                 </td>
             </tr>
         </tbody>
-        <?php } //fin if?>
-        <div class="relative overflow-x-auto mb-16">
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-            <tr>
-                <th scope="col" class="px-6 py-3">
-                   Marca
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Modelo
-                </th>
-
-                <th scope="col" class="px-6 py-3">
-                    Price
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                <?= $pedido["marca"] ?> <br>
-                </th>
-                <td class="px-6 py-4">
-                <?= $pedido["modelo"] ?>
-                </td>
-
-                <td class="px-6 py-4">
-                <?= $pedido["precio"] ?>
-                </td>
-            </tr>
-        </tbody>
     </table>
 </div>
 
-
-        <?php
-        $idpedido_anterior = $idpedido;
-    }//fin foreach
-?>
-    </table>
-</div>
-<div class="mt-16"></div>
 </body>
-
-
 </html>
-
-
-
-

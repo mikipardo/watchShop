@@ -17,7 +17,7 @@ body {
 }
 
 
-.bg-teal-400 { 
+.bg-teal-400 {
     background-color: #26a69a;
 }
 
@@ -30,12 +30,16 @@ a{
         color: red;
 }
 .centrado{
-    display: flex;    
+    display: flex;
     justify-content: center;
 }
 .centrado button{
     margin-left: 1rem;
     margin-right: 1rem;
+    margin-bottom: 10rem;
+}
+.largo{
+  max-width: 80%;
 }
 
 body{
@@ -44,20 +48,22 @@ body{
   background: linear-gradient(0deg, #474bff 0%, #bc48ff 100%);
   }
 
-  
+
 
 .star-ratings-css {
     unicode-bidi: bidi-override;
     color: #c5c5c5;
-    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
     height: 25px;
-    width: 100px;
+    width: 120px;
     margin: 0 auto;
     position: relative;
     text-shadow: 0 1px 0 #a2a2a2;
-  } 
-  
-  
+  }
+
+
   [title="0"]::after {
     width: 0%;
   }
@@ -94,8 +100,16 @@ body{
     width: attr(rating);
     overflow: hidden;
   }
-  
-  
+
+.centrados{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
   @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
   body { margin: 50px; text-align: center; font-family: 'Open Sans', sans-serif; background: #f2fbff; font-size: .6em;}
-  
+
+  .carro-vacio{
+    margin-top: 10rem ;
+     color:white;
+  }

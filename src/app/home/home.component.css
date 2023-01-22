@@ -14,7 +14,7 @@
   position: relative;
   font-size: 80px;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 100vh;
   color: #fff;
   letter-spacing: 5px;
   z-index: 1;
@@ -69,7 +69,9 @@
 }
 
 body{
+  max-height: 70vh;
   background: #474bff;
 background: -webkit-linear-gradient(0deg, #474bff 0%, #bc48ff 100%);
 background: linear-gradient(0deg, #474bff 0%, #bc48ff 100%);
+
 }
