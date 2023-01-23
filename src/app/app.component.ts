@@ -14,6 +14,6 @@ export class AppComponent {
   //https://stackoverflow.com/questions/68651691/show-splash-screen-only-once-on-app-load-using-angular-pwa
 
   ngOnInit():void{
-   // this.route.navigate(["home"]);
+    this.route.navigate(["home"]);
   }
 }

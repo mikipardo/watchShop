@@ -10,6 +10,16 @@ $jsonInfo = json_decode(file_get_contents("php://input"));
 
 $pedido = R::dispense("pedidos");
 
+$ip = "";
+if(!empty($_SERVER["HTTP_CLIENT_IP"])){
+    $ip = $_SERVER["HTTP_CLIENT_IP"];
+}else if(!empty($_SERVER["REMOTE_ADDR"])){
+     $ip = $_SERVER["REMOTE_ADDR"];
+}
+$pedido->ip = $ip;
+
+$pedido->useragent = $_SERVER["HTTP_USER_AGENT"];
+
 //los campos indicados a la izquierda son los campos de la tabla
 //los campos de la derecha es lo enviado desde el servicio de angular
 $pedido->nombre = $jsonInfo->nombre;
@@ -21,6 +31,8 @@ $pedido->fecha = $jsonInfo->fecha;
 $pedido->horario = $jsonInfo->horario;
 
 $id_generado_pedido = R::store($pedido);
+
+
 
 //registro de los productos del carrito asociandolos
 //a la id generada

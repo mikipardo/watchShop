@@ -10,10 +10,15 @@ Funciona de manera similar a include, pero en este caso, si el archivo no existe
 Include_once y Require_once
 Funcionan exactamente de la misma forma que las anteriores salvo que impiden la carga de un mismo fichero varias veces. */
 
+
+
+
 //preparo un registro para la tabla libros
 $reloj = R::dispense("relojes");
+
 $reloj->modelo = $_POST["modelo"];//los corchetes es el name del input
 // la flecha y titulo es el objto con el atributo que vamos a crear en la BBDD
+
 
 $reloj->marca = $_POST["marca"];
 $reloj->valoracion = $_POST["valoracion"];
