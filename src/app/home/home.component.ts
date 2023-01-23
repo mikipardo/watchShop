@@ -2,7 +2,11 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
-  templateUrl:'./home.component.html',
+  template: `
+   <div class="glitch-wrapper">
+  <div class="glitch" data-glitch="Nebula Watches">Nebula Watches</div>
+  </div>`
+  ,
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {

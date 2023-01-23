@@ -34,4 +34,4 @@ $idGenerada=R::store($reloj);//con esto guardamos en BBDD también te devuelve u
 move_uploaded_file($_FILES["portada"]["tmp_name"],"../../src/assets/imagenes/$idGenerada.jpg");
 //para mover el archivo de la foto a la ruta
 
-include("../plantillasPHP/okRegistro.php");
+require_once("../plantillasPHP/okRegistro.php");
