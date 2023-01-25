@@ -45,4 +45,9 @@ export class ServicioProductosService {
   registrarPedido(p:Pedido):Observable<string>{
     return this.http.post<string>(this.ruta_server+"registrarPedido.php",p);
   }
+
+  getPassUser(user:String):Observable<string> {
+
+    return this.http.get<string>(this.ruta_server + "ObtenerPassUser.php?user="+user);
+  }
 }
