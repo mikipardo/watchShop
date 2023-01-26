@@ -1,0 +1,11 @@
+-- Arrancar Servidor con proxy
+ng serve --proxy-config proxy.conf.json
+
+-- guardar configuracion Github
+git pull remote branch
+
+
+-- Paquetes Agregados
+npm install
+npm install --save sweetalert2
+npm install bootstrap jquery @popperjs/core

@@ -1,0 +1,61 @@
+<script src="https://cdn.tailwindcss.com"></script>
+
+<div class="contenedor">
+  <h1>CheckOut</h1>
+  <div class="contenedor2">
+  <div class="rango">
+    <div class="sub">
+      <label for="">nombre</label>
+    </div>
+    <input type="text" [(ngModel)]="pedido.nombre" />
+    <span [hidden]="nombreOk" style="color: red;">error en el nombre</span>
+  </div>
+  <div class="rango">
+    <div class="sub">
+      <label for="">direccion</label>
+    </div>
+    <input type="text"  [(ngModel)]="pedido.direccion"  />
+    <span [hidden]="direccionSpan" style="color: red;">error en el direccion</span>
+  </div>
+  <div class="rango">
+    <div class="sub">
+      <label for="">Cp</label>
+    </div>
+    <input type="text" [(ngModel)]="pedido.cp"  />
+    <span [hidden]="cpSpan" style="color: red;">error en el cp</span>
+  </div>
+  <div class="rango">
+    <div class="sub">
+      <label for="">Telefono</label>
+    </div>
+    <input type="text" [(ngModel)]="pedido.telefono"  />
+    <span [hidden]="movilSpan" style="color: red;">error en el Telefono</span>
+  </div>
+  <div class="rango">
+    <div class="sub">
+      <label for="">Fecha</label>
+    </div>
+    <input type="text" [(ngModel)]="pedido.fecha"  />
+    <span [hidden]="fecha" style="color: red;">error en el fecha</span>
+  </div>
+  <div class="rango">
+    <div class="sub">
+      <label for="">Horario</label>
+    </div>
+    <input type="text" [(ngModel)]="pedido.horario"  />
+    <span [hidden]="horario" style="color: red;">error en el horario</span>
+  </div>
+  <div class="rango">
+    <div class="sub">
+      <label for=""> Numero de tarjeta</label>
+
+    </div>
+    <input type="text" [(ngModel)]="pedido.tarjeta"  />
+    <span [hidden]="tarjetas" style="color: red;">error en el tarjeta</span>
+  </div>
+  <div class="divBtn">
+    <button class="btn" (click)="finalizarPedido()">FINALIZAR PEDIDO</button>
+  </div>
+
+</div>
+</div>

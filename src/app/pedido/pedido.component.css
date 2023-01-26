@@ -1,0 +1,49 @@
+.contenedor2{
+
+background-color: rgba(29, 33, 43, 0.911);
+display: flex;
+flex-direction: column;
+width: 100%;
+border-radius: 10px;
+padding: 2rem;
+}
+.contenedor{
+
+padding: 5rem 10rem 5rem 10rem;
+}
+.rango{
+
+width: 100%;
+padding: 0% 20%;
+}
+.sub{
+
+  width: 100%;
+  display: flex;
+
+}
+input{
+  width: 100%;
+  background-color: rgba(52, 56, 64, 0.87);
+  border-radius: 5px;
+  color: rgb(233, 233, 233);
+}
+.btn{
+  color: white;
+  background-color: rgba(27, 139, 12, 0.87);
+  max-width: 20%;
+  margin-top: 2rem;
+}
+.divBtn{
+display: flex;
+justify-content: center;
+}
+label{
+color: rgb(233, 233, 233);
+font-size: 1.2rem;
+}
+h1{
+  color: white;
+  text-align: center;
+
+}
