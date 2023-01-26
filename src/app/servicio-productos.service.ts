@@ -2,6 +2,7 @@ import { Pedido } from './models/pedido';
 import { RelojesCarrito } from './models/RelojesCarrito';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Usuario } from './modelo/usuario';
 
 import { Reloj } from './models/Reloj';
 import { Observable } from 'rxjs';
@@ -11,6 +12,7 @@ import { Observable } from 'rxjs';
 })
 export class ServicioProductosService {
   ruta_server = "/server/";
+
 
   constructor(private http: HttpClient) {}
 
@@ -46,8 +48,10 @@ export class ServicioProductosService {
     return this.http.post<string>(this.ruta_server+"registrarPedido.php",p);
   }
 
-  getPassUser(user:String):Observable<string> {
+  getCurrentUser(nombre:String):Observable<Usuario> {
+    console.log(nombre);
 
-    return this.http.get<string>(this.ruta_server + "ObtenerPassUser.php?user="+user);
+// se tienen que llamar igual los campos que se pasan por parametro, por lo menos en php que te has vuelto loco
+    return this.http.get<Usuario>(this.ruta_server + "ObtenerPassUser.php?nombre="+nombre);
   }
 }

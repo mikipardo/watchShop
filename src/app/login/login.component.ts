@@ -1,5 +1,6 @@
+import { WithoutSaveGuard } from './../without-save.guard';
 import { Component } from '@angular/core';
-import { LoginOkGuard } from '../login-ok.guard';
+
 
 @Component({
   selector: 'app-login',
@@ -12,13 +13,20 @@ export class LoginComponent {
   userPass:string=""
 
 
-  constructor(private logGuard:LoginOkGuard){}
+  constructor(){}
 
-  sendPassAndUser():string{
+  dsparador(){
+
+    alert(this.getNameAndUser());
+    alert(this.getPassAndUser());
+
+  }
+
+  getPassAndUser():string{
   return this.userPass;
   }
 
-  sendNameAndUser():string{
+  getNameAndUser():string{
     return this.userName;
     }
 }

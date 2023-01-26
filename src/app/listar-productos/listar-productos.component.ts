@@ -1,3 +1,4 @@
+import { Usuario } from './../modelo/usuario';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Reloj } from '../models/Reloj';
@@ -9,8 +10,9 @@ import { ServicioProductosService } from '../servicio-productos.service';
   styleUrls: ['./listar-productos.component.css']
 })
 export class ListarProductosComponent {
-
+nom:string="miki";
 relojes: Reloj[] = {} as Reloj[];
+user:Usuario={}as Usuario;
 
 constructor(private servicioProductosService: ServicioProductosService,private route:Router) {
 //podemos paramatrear un privado llamamos a servicios
@@ -22,6 +24,10 @@ ngOnInit():void{
   //para pedir al servicio los relojes y quedarmelos en
   //el campo relojes definido arriba, usando un observable
   this.servicioProductosService.obtenerRelojes().subscribe( res => this.relojes = res );
+
+  this.servicioProductosService.getCurrentUser(this.nom).subscribe( res => this.user = res );
+  alert(this.user.pass);
+  console.log(this.user);
 }
 
 verDetallesReloj(r:Reloj):void{

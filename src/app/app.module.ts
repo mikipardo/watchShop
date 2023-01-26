@@ -1,3 +1,4 @@
+import { SharedService } from './modelo/globales';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule} from '@angular/common/http';//para servicios REST API
@@ -17,6 +18,8 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent, //declaramos componentes
@@ -26,7 +29,9 @@ import { LoginComponent } from './login/login.component';
     PedidoComponent,
     HeaderComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+
+
   ],
   imports: [
     FormsModule,//para poder usar ngModel
@@ -34,7 +39,8 @@ import { LoginComponent } from './login/login.component';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [LoginComponent,SharedService],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

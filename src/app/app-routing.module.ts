@@ -1,3 +1,4 @@
+
 import { PedidoComponent } from './pedido/pedido.component';
 import { CarritoComponent } from './carrito/carrito.component';
 import { AppComponent } from './app.component';
@@ -11,7 +12,8 @@ import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { path: 'listado', component: ListarProductosComponent },
-  { path: 'carrito', component: CarritoComponent,canActivate:[WithoutSaveGuard] },
+  { path: 'carrito', component: CarritoComponent,canActivate:[WithoutSaveGuard]},
+
   { path: 'detalles/:id', component: DetalleProductoComponent },
   { path: "pedido", component:PedidoComponent},
   { path: "home", component:HomeComponent},
